@@ -1,71 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220922 09:50:33.162" rpa="false" schemaversion="3">
-<suite id="s1" name="Task4" source="/home/hassif/Desktop/qa/RF/task4.robot">
-<test id="s1-t1" name="Check Barier" line="8">
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220922 06:53:44.252" rpa="false" schemaversion="3">
+<suite id="s1" name="Task1" source="/home/hassif/Desktop/qa/RF/task1.robot">
+<test id="s1-t1" name="Login To Deriv" line="8">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${web_url}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220922 09:50:33.243" level="INFO">Opening browser 'chrome' to base url 'https://app.deriv.com/'.</msg>
-<status status="PASS" starttime="20220922 09:50:33.243" endtime="20220922 09:50:36.238"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.3</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220922 09:50:36.239" endtime="20220922 09:50:36.240"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220922 09:50:36.240" endtime="20220922 09:50:36.647"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>//div[@class='btn-purchase__text_wrapper' and contains(.,'Rise')]</arg>
+<msg timestamp="20220922 06:53:44.340" level="INFO">Opening browser 'chrome' to base url 'https://app.deriv.com/'.</msg>
+<msg timestamp="20220922 10:13:59.581" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fe5ab2dcac0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/88861f9e941441a03058880c4426fcaf/screenshot</msg>
+<msg timestamp="20220922 10:13:59.590" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: [Errno 5] Input/output error</msg>
+<msg timestamp="20220922 10:13:59.615" level="FAIL">OSError: [Errno 5] Input/output error</msg>
+<errors>
+</errors>
+</robot>
+' and contains(.,'Rise')]</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220922 09:50:36.648" endtime="20220922 09:50:41.843"/>
+<status status="PASS" starttime="20220922 07:01:07.844" endtime="20220922 07:01:08.280"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>dt_login_button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220922 09:50:41.843" level="INFO">Clicking element 'dt_login_button'.</msg>
-<status status="PASS" starttime="20220922 09:50:41.843" endtime="20220922 09:50:44.862"/>
+<msg timestamp="20220922 07:01:08.285" level="INFO">Clicking element 'dt_login_button'.</msg>
+<status status="PASS" starttime="20220922 07:01:08.281" endtime="20220922 07:01:11.013"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>//input[@type='email']</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220922 09:50:44.862" endtime="20220922 09:50:45.184"/>
+<status status="PASS" starttime="20220922 07:01:11.015" endtime="20220922 07:01:11.346"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>txtEmail</arg>
 <arg>hassif@besquare.com.my</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220922 09:50:45.185" level="INFO">Typing text 'hassif@besquare.com.my' into text field 'txtEmail'.</msg>
-<status status="PASS" starttime="20220922 09:50:45.185" endtime="20220922 09:50:46.196"/>
+<msg timestamp="20220922 07:01:11.349" level="INFO">Typing text 'hassif@besquare.com.my' into text field 'txtEmail'.</msg>
+<status status="PASS" starttime="20220922 07:01:11.347" endtime="20220922 07:01:12.374"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>txtPass</arg>
 <arg>Huhu1234</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220922 09:50:46.196" level="INFO">Typing text 'Huhu1234' into text field 'txtPass'.</msg>
-<status status="PASS" starttime="20220922 09:50:46.196" endtime="20220922 09:50:47.183"/>
+<msg timestamp="20220922 07:01:12.375" level="INFO">Typing text 'Huhu1234' into text field 'txtPass'.</msg>
+<status status="PASS" starttime="20220922 07:01:12.375" endtime="20220922 07:01:13.371"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//button[@type='submit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220922 09:50:47.184" level="INFO">Clicking element '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20220922 09:50:47.184" endtime="20220922 09:50:50.704"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>//div[@class='btn-purchase__text_wrapper' and contains(.,'Rise')]</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20220922 09:50:50.704" endtime="20220922 09:50:53.684"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//div[@id='dt_core_account-info_acc-info']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220922 09:50:53.684" level="INFO">Clicking element '//div[@id='dt_core_account-info_acc-info']'.</msg>
+<msg timestamp="20220922 07:01:13.372" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<msg timestamp="20220922 10:13:59.160" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x7fc85450e2e0&gt;: Failed to establish a new connection: [Errno 111] Connection refused')': /session/3bd61d6a69465754e07775438afaed5e/screenshot</msg>
+<msg timestamp="20220922 10:13:59.161" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: [Errno 5] Input/output error</msg>
+<msg timestamp="20220922 10:13:59.163" level="FAIL">OSError: [Errno 5] Input/output error</msg>
+<errors>
+</errors>
+</robot>
+ement '//div[@id='dt_core_account-info_acc-info']'.</msg>
 <status status="PASS" starttime="20220922 09:50:53.684" endtime="20220922 09:50:54.987"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">

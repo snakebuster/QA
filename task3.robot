@@ -13,11 +13,11 @@ Buy Lower Contract
     Click Element    dt_login_button
     Wait Until Page Contains Element    //input[@type='email']    10
     Input Text    txtEmail    hassif@besquare.com.my
-    Input Text    txtPass    Huhu1234
+    Input Text    txtPass    Huhu1234gti
     Click Element    //button[@type='submit']
     Wait Until Page Contains Element    //div[@class='btn-purchase__text_wrapper' and contains(.,'Rise')]    10 
-     Click Element    //div[@id='dt_core_account-info_acc-info']
-    Wait Until Page Contains Element     //div[contains(@id, "dt_CR")]    10
+    Click Element    //div[@id='dt_core_account-info_acc-info']
+    Wait Until Page Contains Element     //div[contains(@id, "dt_CR")]    10cd 
     Click Element    //li[@id='dt_core_account-switcher_demo-tab']
     Wait Until Page Contains Element    //div[contains(@id, "dt_VRTC")]   30 
     Click Element    //div[contains(@id, "dt_VRTC")]
